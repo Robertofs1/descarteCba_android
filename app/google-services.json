@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "654602715733",
+    "project_id": "descarteconcientecuiaba",
+    "storage_bucket": "descarteconcientecuiaba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654602715733:android:3aabba6e5aca45f8bd4adc",
+        "android_client_info": {
+          "package_name": "com.example.descarteconcientecuiaba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuUgrJ_0hqIz2Qq2MPKesnuj_c7Tt4xj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
