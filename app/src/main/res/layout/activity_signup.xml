@@ -12,13 +12,14 @@
         layout="@layout/tb_customize"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#A19E6B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/textInputName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,19 +27,22 @@
         android:layout_marginEnd="16dp"
         android:textColorHint="#000000"
         app:boxBackgroundColor="#FFFFFF"
+        app:errorTextColor="#FFFFFF"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
         app:hintTextColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/includeToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/includeToolbar"
+        app:placeholderTextColor="#000000">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputName"
+            android:id="@+id/textEditName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome Completo" />
+            android:hint="Nome Completo"
+            android:inputType="text|textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -54,12 +58,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/textInputName">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:inputType="text|textEmailAddress"
             android:textColor="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,9 +83,11 @@
         app:layout_constraintTop_toBottomOf="@id/textInputEmail">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditAdress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Endereço" />
+            android:hint="Endereço"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -96,9 +104,11 @@
         app:layout_constraintTop_toBottomOf="@id/textInputAddres">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditStateCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Estado/Cidade" />
+            android:hint="Estado/Cidade"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -115,9 +125,11 @@
         app:layout_constraintTop_toBottomOf="@id/textInputStateCity">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Gênero" />
+            android:hint="Gênero"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -134,9 +146,11 @@
         app:layout_constraintTop_toBottomOf="@id/textInputGender">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditCPFCNPJ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CPF/CNPJ" />
+            android:hint="CPF/CNPJ"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -147,32 +161,63 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         app:boxBackgroundColor="#FFFFFF"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInputCPForCPNJ">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha" />
+            android:hint="Senha"
+            android:inputType="text|textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/textInputName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button_login"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPasswordAgain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="100dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputPassword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textEditPasswordAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite novamente a sua Senha"
+            android:inputType="text|textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:text="Cadastrar"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textInputPasswordAgain"
         app:layout_constraintVertical_bias="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

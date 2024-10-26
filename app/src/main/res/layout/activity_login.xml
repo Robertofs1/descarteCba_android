@@ -95,7 +95,7 @@
         app:layout_constraintTop_toTopOf="@+id/textInputLayout2" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/btnSignUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

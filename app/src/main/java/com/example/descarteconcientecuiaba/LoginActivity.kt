@@ -27,13 +27,13 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         initializeClickEvent()
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.button_login)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btnSignUp)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        buttonAbrir = findViewById(R.id.button_login)
+        buttonAbrir = findViewById(R.id.btnSignUp)
         buttonAbrir.setOnClickListener{
 
             val intent = Intent(
