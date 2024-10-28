@@ -13,9 +13,12 @@
         android:theme="@style/Theme.DescarteConcienteCuiaba"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
-            android:parentActivityName=".LoginActivity"
+            android:name=".ProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
