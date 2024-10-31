@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        buttonClose = findViewById(R.id.button_close)
-        buttonClose.setOnClickListener{
-            finish()
-        }
+        //buttonClose = findViewById(R.id.button_close)
+        //buttonClose.setOnClickListener{
+         //   finish()
+        //}
     }
 }

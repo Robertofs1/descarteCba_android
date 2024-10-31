@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView( binding.root )
         initializeClickEvent()
-        //firebaseAuth.signOut()
+        firebaseAuth.signOut()
 
     }
 
